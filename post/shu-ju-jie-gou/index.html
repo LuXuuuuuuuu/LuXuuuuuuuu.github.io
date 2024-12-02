@@ -1,0 +1,355 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>数据结构 | </title>
+
+<link rel="shortcut icon" href="https://luxuuuuuuuu.github.io/favicon.ico?v=1733143661914">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://luxuuuuuuuu.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://luxuuuuuuuu.github.io" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1733143661914" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    数据结构
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-12-02 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="第二章-算法分析">第二章 算法分析</h1>
+<figure data-type="image" tabindex="1"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9dec66e4-e0cc-4016-8444-5f5d1fae9456/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="21-数学基础">2.1 数学基础</h2>
+<ul>
+<li>O</li>
+<li>Ω</li>
+<li>θ</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/fb4cd17d-0431-4936-ac3d-7f0d300d2ccd/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>将常数或低阶项放进大O是非常坏的习惯</strong></em></p>
+<p><strong>N的增长要快于log的任意次幂</strong></p>
+<h2 id="22-模型">2.2 模型</h2>
+<h2 id="23-要分析的问题">2.3 要分析的问题</h2>
+<p>作为一个例子，我们将在下一节考虑下述问题：</p>
+<p><strong>最大子序列和问题</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/b9478ffc-4444-4026-b14a-3b4695668e98/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="24-运行时间计算">2.4 运行时间计算</h2>
+<h3 id="241-一个简单的例子">2.4.1 一个简单的例子</h3>
+<figure data-type="image" tabindex="4"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/de8aa6d1-53dd-4d58-9b84-54f7fcb03252/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>所有的生命不占时间</li>
+<li>第一行和第四行各占一个时间单元</li>
+<li>第三行每执行一次占四个单元（两次乘法，一次加法，一次赋值）</li>
+<li>i的自增运算，初始化i，测试i大小隐藏开销（初始化1，测试N+1，自增N</li>
+</ul>
+<h3 id="242-一般法则">2.4.2 一般法则</h3>
+<figure data-type="image" tabindex="5"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/316da6bc-1b00-4c46-9d39-5d440498adba/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/22fbd647-d461-44f6-bc46-8a20c5ec0686/image.png" alt="image.png" loading="lazy"></figure>
+<pre><code class="language-java">public static long factorial(int n){
+	if(n&lt;=1){
+	return 1;
+	}else{
+	return n * factorial(n-1);
+	}
+}
+//很显然，运行时间为O（n）
+
+//我们再看一个例子
+public static long fib(int n){
+if(n &lt;= 1){
+return 1;
+}else{
+return fib(n-1)+fib(n-2);
+}
+}
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ad634877-5cec-48da-b683-02ce5a3e2fcf/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="243-最大子序列和问题的求解">2.4.3 最大子序列和问题的求解</h3>
+<p><em><strong>算法一</strong></em>：（暴力）</p>
+<pre><code class="language-java">public static int maxSubSum1(int[] a){
+	int maxSum=0;
+	
+	for(int i=0;i&lt;a.length;i++){
+		for(int j=i; j&lt;a.length;j++)
+		{
+			int thisSum = 0;
+			
+			for(int k = i;k&lt;=j;k++){
+				thisSum+=a[k];
+			}
+			if(thisSum&gt;maxSum){
+			maxSum=thisSum;
+			}
+		}
+	}
+		return maxSum;
+}
+			
+</code></pre>
+<figure data-type="image" tabindex="8"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/fe753589-b241-4428-923f-b96b710787d0/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法二</strong></em></p>
+<pre><code class="language-java">public static int maxSubSum2(int[] a){
+	int maxSum=0;
+	int n=a.length;
+	for(int i=0;i&lt;=n;i++){
+		int thisSum=0;
+		for(int j=i;j&lt;=n;j++){
+			thisSum+=a[j];
+			
+			if(thisSUm&gt;maxSum){
+				maxSum=thisSum;
+			}
+		}
+		return maxSum;
+	}
+</code></pre>
+<figure data-type="image" tabindex="9"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/94a930c4-ce16-4ad1-b7f0-294f05937c20/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法三（分治）</strong></em></p>
+<pre><code class="language-java">private static int maxSamRec(int[] a,int left;int right){
+	if(left==right)
+		if(a[left]&gt;0){
+			return a[left];
+		}else{
+		return 0;
+		}
+		
+		int center=(left+right)/2;
+		int maxLeftSum = maxSumRec(a,left,center);
+		int maxRightSum = maxSumRec(a,center+1,right);
+		
+		int maxLeftBorderSum=0;,leftBorderSum=0;
+		for(int i=center;i&gt;=left;i--){
+			leftBorderSum+=a[i];
+			if(leftBorderSum&gt;maxLeftBorderSum){
+				maxLeftSum=leftBorderSum;
+			}
+		}
+		int maxRightBorderSum=0;rightBorderSum=0;
+		for(int i=center;i&lt;=right;i++){
+			rightBorderSum+=a[i];
+			if(rightBorderSum&gt;maxRightBorderSum){
+				maxRightSum=rightBorderSum;
+			}
+		}
+		return max3(maxLeftsum,maxRightSum,maxLeftBorderSum+maxRightBorderSum);
+} 
+</code></pre>
+<figure data-type="image" tabindex="10"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/110b485a-ac31-4f46-bed2-1d5c1a3e8f4a/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法四</strong></em></p>
+<pre><code class="language-java">public static int maxSubSum4(int[] a){
+	int maxSum=0,thisSum=0;
+	
+	for(int j=0;j&lt;a.length;j++){
+			thisSum+=a[j];
+			
+			if(thisSum&gt;maxSum)
+				maxSum=thisSum;
+			else if(thisSum&lt;0)
+				thisSum=0;
+		
+		}
+		return maxSum;
+	}
+</code></pre>
+<p><em><strong>这种算法称作联机算法</strong></em></p>
+<figure data-type="image" tabindex="11"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/e915c5f5-a14c-4997-9a4b-ee9b1060aad3/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="244-运行时间中的对数">2.4.4 运行时间中的对数</h3>
+<p>三个例子</p>
+<p><em><strong>折半查找（binary search）</strong></em></p>
+<figure data-type="image" tabindex="12"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/c967acd5-5be6-4b24-9e84-8c287ae90ece/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/81a13f0f-f8bf-437f-a6a9-99a0ac2e2f0e/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>欧几里得算法</strong></em></p>
+<figure data-type="image" tabindex="14"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3fc33cce-f6ec-4c3a-8453-a842fb2c9930/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9b81c879-83a8-41f6-8943-b5ded5b6dff7/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>幂运算</strong></em></p>
+<figure data-type="image" tabindex="16"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d8dd625f-e512-49df-aebd-8720c1aab9c7/image.png" alt="image.png" loading="lazy"></figure>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://luxuuuuuuuu.github.io/post/ji-suan-ji-wang-luo-xie-xi-ren/" class="post-title gt-a-link">
+                    计算机网络（谢希仁)
+                </a>
+            </div>
+        
+
+        
+            <span id="/post/shu-ju-jie-gou/" class="leancloud_visitors" data-flag-title="数据结构">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+            
+
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs/dist/disqusjs.css">
+<script src="https://cdn.jsdelivr.net/npm/disqusjs/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: '',
+  apikey: '',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+            
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: '',
+		appKey: '',
+		avatar: '',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"> 这世间所有的相遇，都是久别重逢</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://luxuuuuuuuu.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

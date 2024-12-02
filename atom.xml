@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://luxuuuuuuuu.github.io</id>
+    <title></title>
+    <updated>2024-12-02T12:47:47.260Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://luxuuuuuuuu.github.io"/>
+    <link rel="self" href="https://luxuuuuuuuu.github.io/atom.xml"/>
+    <subtitle> 这世间所有的相遇，都是久别重逢</subtitle>
+    <logo>https://luxuuuuuuuu.github.io/images/avatar.png</logo>
+    <icon>https://luxuuuuuuuu.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, </rights>
+    <entry>
+        <title type="html"><![CDATA[计算机组成原理]]></title>
+        <id>https://luxuuuuuuuu.github.io/post/ji-suan-ji-zu-cheng-yuan-li/</id>
+        <link href="https://luxuuuuuuuu.github.io/post/ji-suan-ji-zu-cheng-yuan-li/">
+        </link>
+        <updated>2024-12-02T12:44:45.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="第七章-存储器层次结构">第七章 存储器层次结构</h1>
+<h2 id="71存储器概述">7.1存储器概述</h2>
+<h3 id="711存储器的分类">7.1.1存储器的分类</h3>
+<p>1.按存储元件分类</p>
+<ul>
+<li>半导体存储器</li>
+<li>磁性材料存储器</li>
+<li>光介质存储器。</li>
+</ul>
+<p>2.按存取方式分类</p>
+<ul>
+<li>随机存取存储器（RAM）</li>
+<li>顺序存取存储器（SAM）</li>
+<li>直接存取存储器（DAM）</li>
+</ul>
+<p>3.按信息的可更改性分类<br>
+按信息的可更改性分为可读可写存储器和只读存储器(read only memory,ROM)。<br>
+ROM中的信息一旦确定，通常情况下只读不写，但在某些情况下也可重新写入。RAM是<br>
+一种可读可写存储器，RAM和ROM都采用随机存取方式进行信息的访问。</p>
+<p>4.按断电后信息的可保存性分类</p>
+<h3 id="712-主存储器的组成和基本操作">7.1.2 主存储器的组成和基本操作</h3>
+<figure data-type="image" tabindex="1"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/0d43c04a-4ccf-4da7-8b08-49de6cda98f5/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="713存储器的层次化结构">7.1.3存储器的层次化结构</h3>
+<figure data-type="image" tabindex="2"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3b30e90b-c334-4bc5-b4a7-fa0b3af2c877/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>数据一般只在相邻两层之间复制传送，而且总是从慢速存储器复制到快速存储器才能被使用。</li>
+</ul>
+<h2 id="72-半导体随机存取存储器">7.2 半导体随机存取存储器</h2>
+<p><em><strong>半导体 RAM具有体积小、存取速度快等优点，因而适合作为内部存储器使用</strong></em></p>
+<ul>
+<li>半导体RAM
+<ul>
+<li>双极型RAM</li>
+<li>MOS型RAM
+<ul>
+<li>静态RAM（SRAM）</li>
+<li>动态RAM（DRAM）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="721-基本存储元件">7.2.1 基本存储元件</h3>
+<p><em><strong>用来存储一位二进制信息</strong></em></p>
+<p>1.六管静态MOS管存储元件</p>
+<figure data-type="image" tabindex="3"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/5a92534d-3424-45f4-bb7d-bd84ef7dab8e/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p>A高电平，B低电平存1</p>
+</li>
+<li>
+<p>B高电平，A低电平存2</p>
+</li>
+<li>
+<p>保持：W上加低电平</p>
+</li>
+<li>
+<p>读出：</p>
+<ul>
+<li>在两个位线，字选择线上加高电平</li>
+<li>检测位线负脉冲</li>
+</ul>
+</li>
+<li>
+<p>写入</p>
+<ul>
+<li>字选择线上加高电平</li>
+<li></li>
+</ul>
+<p>若要写1,则在位线 D1上加低电平，使B点电位下降，T1管截止，A点电位上升，使T2管导通完成写1。</p>
+<p>若要写0,则在D0线上加低电平，使A点电位下降，T2管截止，B点电位上升，T1管导通，完成写0。</p>
+</li>
+</ul>
+<p>2.单管动态MOS 管存储元件</p>
+<figure data-type="image" tabindex="4"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/21514603-174c-4308-8449-8390ba55a4e7/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>读出（破坏性读出）
+<ul>
+<li>字选择线W加选通脉冲</li>
+</ul>
+</li>
+<li>写入
+<ul>
+<li>写1时，在数据线上加高电平，经T管对Cs充电</li>
+<li>写0时，在数据线上加低电平，Cs充分放电</li>
+</ul>
+</li>
+<li>刷新
+<ul>
+<li>定时对Cs充电</li>
+</ul>
+</li>
+</ul>
+<p>3.静态存储元件和动态存储元件比较</p>
+<figure data-type="image" tabindex="5"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/601e87da-4df6-4856-a32e-c1f0c86480ed/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="722-sram芯片和dram芯片">7.2.2 SRAM芯片和DRAM芯片</h3>
+<p><em><strong>存储器芯片由存储体，I/O读写电路，地址译码和控制电路等部分组成</strong></em></p>
+<figure data-type="image" tabindex="6"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/755f1f51-cc37-46a0-b437-200ed14a8b4c/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p>存储体（存储矩阵）：存储单元的集合</p>
+</li>
+<li>
+<p>地址译码器：将地址转换为译码输出线上的高电平，有一维译码和二维译码两种方式</p>
+<ul>
+<li>
+<p>一维译码</p>
+<ul>
+<li>适用于小容量的静态存储器</li>
+<li>只有一个行译码器</li>
+</ul>
+</li>
+<li>
+<p>二维译码</p>
+<ul>
+<li>适用于容量较大的动态存储器</li>
+<li></li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/099cdb63-5ab4-4ad0-89ad-7c4adc3ceedf/image.png" alt="image.png" loading="lazy"></figure>
+</li>
+</ul>
+<p>有4096个单元，需要12根地址线？？？？</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="8"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/7f6864a6-f5f9-4127-b28a-4920ff8448b9/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>驱动器（译码器后加驱动器）</li>
+<li>I/O控制电路：用于控制被选中单元的读出或写入，具有放大信息的作用</li>
+<li>片选控制信号CS</li>
+<li>读写控制信号WE</li>
+</ul>
+<p><strong>4M*4位DRAM芯片示意图</strong></p>
+<figure data-type="image" tabindex="9"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/f0c79356-b49d-42b8-a463-e30c85a0c44e/image.png" alt="image.png" loading="lazy"></figure>
+<p>（a）</p>
+<ul>
+<li>11根地址引脚线A0-A10</li>
+<li>四根数据引脚线D1-D4</li>
+<li>RAS行选通信号</li>
+<li>CAS列选通信号</li>
+<li>WE读写控制引脚</li>
+<li>OE输出使能驱动引脚（低电平有效，高电平断开输出）</li>
+</ul>
+<p><em><strong>刷新时只给各芯片送行地址和RAS信号，芯片中某一行的所有元被选中并进行读操作——读出零则充分放电，一则进行充电</strong></em></p>
+<h3 id="723-sdram芯片技术">7.2.3 SDRAM芯片技术</h3>
+<p>1.SDRAM芯片技术</p>
+<p>传统的</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构]]></title>
+        <id>https://luxuuuuuuuu.github.io/post/shu-ju-jie-gou/</id>
+        <link href="https://luxuuuuuuuu.github.io/post/shu-ju-jie-gou/">
+        </link>
+        <updated>2024-12-02T12:44:04.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="第二章-算法分析">第二章 算法分析</h1>
+<figure data-type="image" tabindex="1"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9dec66e4-e0cc-4016-8444-5f5d1fae9456/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="21-数学基础">2.1 数学基础</h2>
+<ul>
+<li>O</li>
+<li>Ω</li>
+<li>θ</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/fb4cd17d-0431-4936-ac3d-7f0d300d2ccd/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>将常数或低阶项放进大O是非常坏的习惯</strong></em></p>
+<p><strong>N的增长要快于log的任意次幂</strong></p>
+<h2 id="22-模型">2.2 模型</h2>
+<h2 id="23-要分析的问题">2.3 要分析的问题</h2>
+<p>作为一个例子，我们将在下一节考虑下述问题：</p>
+<p><strong>最大子序列和问题</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/b9478ffc-4444-4026-b14a-3b4695668e98/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="24-运行时间计算">2.4 运行时间计算</h2>
+<h3 id="241-一个简单的例子">2.4.1 一个简单的例子</h3>
+<figure data-type="image" tabindex="4"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/de8aa6d1-53dd-4d58-9b84-54f7fcb03252/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>所有的生命不占时间</li>
+<li>第一行和第四行各占一个时间单元</li>
+<li>第三行每执行一次占四个单元（两次乘法，一次加法，一次赋值）</li>
+<li>i的自增运算，初始化i，测试i大小隐藏开销（初始化1，测试N+1，自增N</li>
+</ul>
+<h3 id="242-一般法则">2.4.2 一般法则</h3>
+<figure data-type="image" tabindex="5"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/316da6bc-1b00-4c46-9d39-5d440498adba/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/22fbd647-d461-44f6-bc46-8a20c5ec0686/image.png" alt="image.png" loading="lazy"></figure>
+<pre><code class="language-java">public static long factorial(int n){
+	if(n&lt;=1){
+	return 1;
+	}else{
+	return n * factorial(n-1);
+	}
+}
+//很显然，运行时间为O（n）
+
+//我们再看一个例子
+public static long fib(int n){
+if(n &lt;= 1){
+return 1;
+}else{
+return fib(n-1)+fib(n-2);
+}
+}
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ad634877-5cec-48da-b683-02ce5a3e2fcf/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="243-最大子序列和问题的求解">2.4.3 最大子序列和问题的求解</h3>
+<p><em><strong>算法一</strong></em>：（暴力）</p>
+<pre><code class="language-java">public static int maxSubSum1(int[] a){
+	int maxSum=0;
+	
+	for(int i=0;i&lt;a.length;i++){
+		for(int j=i; j&lt;a.length;j++)
+		{
+			int thisSum = 0;
+			
+			for(int k = i;k&lt;=j;k++){
+				thisSum+=a[k];
+			}
+			if(thisSum&gt;maxSum){
+			maxSum=thisSum;
+			}
+		}
+	}
+		return maxSum;
+}
+			
+</code></pre>
+<figure data-type="image" tabindex="8"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/fe753589-b241-4428-923f-b96b710787d0/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法二</strong></em></p>
+<pre><code class="language-java">public static int maxSubSum2(int[] a){
+	int maxSum=0;
+	int n=a.length;
+	for(int i=0;i&lt;=n;i++){
+		int thisSum=0;
+		for(int j=i;j&lt;=n;j++){
+			thisSum+=a[j];
+			
+			if(thisSUm&gt;maxSum){
+				maxSum=thisSum;
+			}
+		}
+		return maxSum;
+	}
+</code></pre>
+<figure data-type="image" tabindex="9"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/94a930c4-ce16-4ad1-b7f0-294f05937c20/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法三（分治）</strong></em></p>
+<pre><code class="language-java">private static int maxSamRec(int[] a,int left;int right){
+	if(left==right)
+		if(a[left]&gt;0){
+			return a[left];
+		}else{
+		return 0;
+		}
+		
+		int center=(left+right)/2;
+		int maxLeftSum = maxSumRec(a,left,center);
+		int maxRightSum = maxSumRec(a,center+1,right);
+		
+		int maxLeftBorderSum=0;,leftBorderSum=0;
+		for(int i=center;i&gt;=left;i--){
+			leftBorderSum+=a[i];
+			if(leftBorderSum&gt;maxLeftBorderSum){
+				maxLeftSum=leftBorderSum;
+			}
+		}
+		int maxRightBorderSum=0;rightBorderSum=0;
+		for(int i=center;i&lt;=right;i++){
+			rightBorderSum+=a[i];
+			if(rightBorderSum&gt;maxRightBorderSum){
+				maxRightSum=rightBorderSum;
+			}
+		}
+		return max3(maxLeftsum,maxRightSum,maxLeftBorderSum+maxRightBorderSum);
+} 
+</code></pre>
+<figure data-type="image" tabindex="10"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/110b485a-ac31-4f46-bed2-1d5c1a3e8f4a/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>算法四</strong></em></p>
+<pre><code class="language-java">public static int maxSubSum4(int[] a){
+	int maxSum=0,thisSum=0;
+	
+	for(int j=0;j&lt;a.length;j++){
+			thisSum+=a[j];
+			
+			if(thisSum&gt;maxSum)
+				maxSum=thisSum;
+			else if(thisSum&lt;0)
+				thisSum=0;
+		
+		}
+		return maxSum;
+	}
+</code></pre>
+<p><em><strong>这种算法称作联机算法</strong></em></p>
+<figure data-type="image" tabindex="11"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/e915c5f5-a14c-4997-9a4b-ee9b1060aad3/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="244-运行时间中的对数">2.4.4 运行时间中的对数</h3>
+<p>三个例子</p>
+<p><em><strong>折半查找（binary search）</strong></em></p>
+<figure data-type="image" tabindex="12"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/c967acd5-5be6-4b24-9e84-8c287ae90ece/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/81a13f0f-f8bf-437f-a6a9-99a0ac2e2f0e/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>欧几里得算法</strong></em></p>
+<figure data-type="image" tabindex="14"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3fc33cce-f6ec-4c3a-8453-a842fb2c9930/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9b81c879-83a8-41f6-8943-b5ded5b6dff7/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>幂运算</strong></em></p>
+<figure data-type="image" tabindex="16"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d8dd625f-e512-49df-aebd-8720c1aab9c7/image.png" alt="image.png" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[计算机网络（谢希仁)]]></title>
+        <id>https://luxuuuuuuuu.github.io/post/ji-suan-ji-wang-luo-xie-xi-ren/</id>
+        <link href="https://luxuuuuuuuu.github.io/post/ji-suan-ji-wang-luo-xie-xi-ren/">
+        </link>
+        <updated>2024-11-28T05:17:52.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="第三章-数据链路层">第三章 数据链路层</h1>
+<h2 id="32-点对点协议ppp">3.2 点对点协议PPP</h2>
+<h3 id="321-ppp协议的特点">3.2.1 PPP协议的特点</h3>
+<ul>
+<li>
+<p>应满足的需求</p>
+</li>
+<li>
+<p>协议的组成</p>
+<ul>
+<li>将IP数据报封装到串行链路的方法</li>
+<li>链路控制协议LCP（用来建立，配置和测试数据链路连接）</li>
+<li>网络控制协议NCP</li>
+</ul>
+</li>
+<li>
+<p>PPP协议的帧格式</p>
+<ul>
+<li>各字段的意义</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://luxuuuuuuuu.github.io/post-images/1732807802206.png" alt="" loading="lazy"></figure>
+<ul>
+<li>字节填充</li>
+<li>零比特填充（只要出现五个连续的一，就填充一个零）</li>
+</ul>
+</li>
+<li>
+<p>PPP协议的工作状态</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/87646e8b-5a66-4722-b547-87cd225cc6df/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/80429a48-ee31-4ba3-9c4c-1cc7b99e2bb6/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="33-使用广播信道的数据链路层">3.3 使用广播信道的数据链路层</h2>
+<h3 id="321-局域网的数据链路层">3.2.1 局域网的数据链路层</h3>
+<h3 id="332-csmacd协议">3.3.2 CSMA/CD协议</h3>
+<ul>
+<li>多点接入</li>
+<li>载波监听</li>
+<li>碰撞检测</li>
+</ul>
+<p>显然，在使用CSMA/CD协议时，一个站不可能同时发送和接收，即不可能进行全双工通信而只能进行半双工通信。</p>
+<figure data-type="image" tabindex="4"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/f9b9cbbf-08d9-412e-b06f-198d66a26bdd/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="333-使用集线器的星形拓扑">3.3.3 使用集线器的星形拓扑</h3>
+<p>集线器：</p>
+<figure data-type="image" tabindex="5"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/e869af7d-aa28-4875-982d-a66caab2de76/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>物理上星形；逻辑上总线</li>
+<li>有许多接口，很像一个多接口的转发器</li>
+<li>工作在物理层，仅仅简单的转发比特，不进行碰撞检测（若两个接口同时有信号输入，则所有的接口都收不到正确的帧</li>
+</ul>
+<h3 id="334-以太网的信道利用率">3.3.4 以太网的信道利用率</h3>
+<p>扣除碰撞造成的信道损失后，以太网的总的信道利用率并不能达到%100</p>
+<p>要提高以太网的的信道利用率，就必须减小t与T0之比</p>
+<figure data-type="image" tabindex="6"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ba347a90-e021-4625-a680-40789c891fca/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/189811f1-bc3c-4a90-9857-c1df00f8ec18/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="335-以太网的mac层">3.3.5 以太网的MAC层</h3>
+<ul>
+<li>MAC层的硬件地址</li>
+</ul>
+<p><em><strong>“名字指出我们所要寻找的那个资源，地址指出那个资源在何处，路由告诉我们如何到达该处”</strong></em></p>
+<p><em><strong>严格的讲，局域网的地址应当是每一个站的“名字”或标识符</strong></em></p>
+<figure data-type="image" tabindex="8"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/814a05f6-3642-47cf-a6b8-ce6dde89291c/image.png" alt="image.png" loading="lazy"></figure>
+<p>现在的局域网适配器实际上使用的都是6字节的MAC地址</p>
+<p>前三个字节（OUI，组织唯一标识符，也叫公司标识符company_id）</p>
+<p>后三个字节是扩展标识符（extended identifier）</p>
+<figure data-type="image" tabindex="9"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/b7b26cc9-b855-4f74-892e-2c1dc1ae4682/image.png" alt="image.png" loading="lazy"></figure>
+<p><strong>最低位：I/G位（individual/group）：</strong></p>
+<p><strong>I/G为一表示组地址，用来进行多播</strong></p>
+<p><strong>为零时表示一个单个站地址</strong></p>
+<ul>
+<li>MAC帧的格式</li>
+</ul>
+<figure data-type="image" tabindex="10"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/0c8b4906-cd6d-4639-aa09-4482e14a3a2a/image.png" alt="image.png" loading="lazy"></figure>
+<p>前同步码：使接收端的适配器在接收MAC帧时迅速调整时钟频率，使其与发送端的时钟同步</p>
+<p><em><strong>无效帧</strong></em></p>
+<figure data-type="image" tabindex="11"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/28214a85-b3f9-421e-81c6-251ec022b44d/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>Q1：MAC子层如何知道从接收到的的以太网帧中取出多少字节的数据交付给上一层协议</strong></em>？？？</p>
+<figure data-type="image" tabindex="12"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ad791824-22f2-4d28-b0d5-711362f06fa5/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>Q2：填充问题</strong></em></p>
+<figure data-type="image" tabindex="13"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/483dd06c-6e48-4c46-bcf7-31a6d499d7a1/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>ATTENTION</strong></em></p>
+<figure data-type="image" tabindex="14"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/e865ab5e-cb99-4839-93d8-ab5f3fd9c683/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="34-扩展的以太网">3.4 扩展的以太网</h2>
+<h3 id="341-在物理层扩展以太网">3.4.1 在物理层扩展以太网</h3>
+<ul>
+<li>转发器</li>
+<li>光纤</li>
+</ul>
+<figure data-type="image" tabindex="15"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/1411c720-dc40-4c28-ac2d-a386668e890f/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="342-在数据链路层扩展以太网">3.4.2 在数据链路层扩展以太网</h3>
+<p><strong>1.以太网交换机的特点</strong></p>
+<ul>
+<li>最初用网桥</li>
+<li>交换式集线器（交换机）：
+<ul>
+<li>每个接口连主机或交换机</li>
+<li>一般都工作在全双工方式</li>
+<li>具有并行性，能同时连接多对接口</li>
+<li>相连的主机独占传输媒体，无碰撞的进行通信</li>
+<li>自学习建立交换表</li>
+<li>优点</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="16"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/2e93e570-2b1a-4542-9714-3d28530ee255/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>直通（cut-through)</strong></em>：不必缓存数据帧，缺点是不检查差错</p>
+<p><strong>2.以太网交换机的自学习功能</strong></p>
+<p><em><strong>冗余链路导致的无限制兜圈问题</strong></em></p>
+<p>利用生成树协议STP，保证主机之间的路径是无环路的树状结构</p>
+<h3 id="343-虚拟局域网">3.4.3 虚拟局域网</h3>
+<figure data-type="image" tabindex="17"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/4c3b53c8-9e00-45d1-a461-618f23d64143/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="18"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ff14670c-c52a-41f3-95ca-612b26288ea3/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="35-高速以太网">3.5 高速以太网</h2>
+<p>略</p>
+<h1 id="第四章-网络层">第四章 网络层</h1>
+<figure data-type="image" tabindex="19"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3f8dba2f-ee16-4549-b0c7-f37212d76560/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="41-网络层提供的两种服务">4.1 网络层提供的两种服务</h2>
+<p><em><strong>网络层向上只提供灵活的，无连接的，尽最大努力交付的数据报服务</strong></em></p>
+<p><em><strong>网络层不提供服务质量的承诺</strong></em></p>
+<figure data-type="image" tabindex="20"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/a2c84f1f-0ca1-47e2-a7ba-e4f03eccdb87/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="21"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/21b9df38-1d9c-4f87-ad37-743c7b8a4f49/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="42-网际协议ip">4.2 网际协议IP</h2>
+<figure data-type="image" tabindex="22"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/7fb8a7ac-b2ee-46b2-b772-f757090b56b7/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="23"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/5684af87-1b74-4406-b3e9-5950b5da2d20/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="421-虚拟互连网络">4.2.1 虚拟互连网络</h3>
+<p><em><strong>网络互连需要解决的问题</strong></em></p>
+<figure data-type="image" tabindex="24"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/27e01f10-4219-424d-895f-f9cdcabc0d87/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/020b828a-f952-470f-84a7-b10040e74c37/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>注：有时把网络层使用的路由器称为网关</strong></em></p>
+<figure data-type="image" tabindex="26"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/08b361be-37ce-4c82-931b-66cb7a28cbc4/image.png" alt="image.png" loading="lazy"></figure>
+<p>互联网可以由多种异构网络互连组成</p>
+<h3 id="422-分类的ip地址">4.2.2 分类的IP地址</h3>
+<p><em><strong>IP地址就是给互联网上的每一台主机（或路由器）的每一个接口分配一个在全世界范围内是唯一的32位的标识符</strong></em></p>
+<p>IP地址的三个阶段</p>
+<p>（1）分类的IP地址</p>
+<p>（2）子网的划分</p>
+<p>（3）构成超网</p>
+<figure data-type="image" tabindex="27"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9f76ea06-e50a-4d58-84d9-6dca583b1f92/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="28"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/35cd7784-f64e-4104-8f8f-1bf18cf44461/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>IP地址不仅仅指明一台主机，还指明了主机所连接到的网络</strong></em></p>
+<ul>
+<li>IP地址中的全0表示”这个（this）“，网络号字段为全0的IP地址表示本网络。</li>
+<li>网络号为01111111保留作为本地环回测试（loopback test）</li>
+</ul>
+<figure data-type="image" tabindex="29"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ff598c55-c1bf-4bda-beb8-8cbc3b70acb1/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="30"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/97e14f4f-e74a-4d7e-ab49-c7ec64cb75c8/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="31"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/accfbfb0-0b85-4033-ad6d-070e364393d8/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p>IP地址的特点：</p>
+<ul>
+<li>
+<p>每个IP地址都由网络号和主机号两部分组成。</p>
+<ul>
+<li>IP地址是一种分等级的地址结构</li>
+<li>管理机构只分配网络号，主机号由使用该网络号的机构自行分配</li>
+<li>路由器仅根据目的主机所连接的网络号来转发分组（从而减小路由表所占的存储空间以及查找路由表的时间</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<figure data-type="image" tabindex="32"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/4feed3ec-3fff-4c94-885e-84beccba68f5/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>按照互联网的观点，一个网络是指具有相同网络号net-id的主机的集合</li>
+</ul>
+<p><em><strong>因此，用转发器或网桥连接起来的若干个局域网仍为一个网络</strong></em></p>
+<ul>
+<li>平等</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="33"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/71a685ec-7555-4c76-bc6d-dcfc5f2b15a1/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="423-ip地址与硬件地址">4.2.3 IP地址与硬件地址</h3>
+<figure data-type="image" tabindex="34"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/189cd061-9a48-476e-888f-52bf42587b26/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>当IP数据报放入数据链路层的MAC帧中之后，整个IP数据报就成为MAC帧的数据，因而在数据链路层看不见数据报的IP地址</strong></em></p>
+<figure data-type="image" tabindex="35"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/5f4e4c9d-f355-4273-855a-a44f86f5265b/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="36"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ce80b719-4ae4-4056-a0f8-c952d8ba5500/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>强调</strong></em>：</p>
+<ul>
+<li>在IP层抽象的互联网上只能看到IP数据报（即中间经过的路由器的IP地址并不出现在IP数据报的首部中</li>
+<li>虽然IP数据报首部有源站IP地址，但路由器只根据目的站的IP地址的网络号进行路由选择</li>
+<li>在局域网的链路层，只能看见MAC帧</li>
+</ul>
+<h3 id="424-地址解析协议arp">4.2.4 地址解析协议ARP</h3>
+<p><em><strong>已经知道一个机器（主机或路由器）的IP地址，需要找出其硬件地址</strong></em></p>
+<figure data-type="image" tabindex="37"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/79f21cb6-5ab7-4b5e-928d-8896ad44a79c/image.png" alt="image.png" loading="lazy"></figure>
+<p>由于是IP协议使用了ARP协议，因此通常将其划分到网络层。当然，划分到数据链路层也是可以的。</p>
+<figure data-type="image" tabindex="38"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d0d21b80-fd83-490c-9df0-aef87d440ee4/image.png" alt="image.png" loading="lazy"></figure>
+<p>ARP高速缓存</p>
+<p>生存时间</p>
+<p><em><strong>注意，ARP是解决同一个局域网上的主机或路由器的IP地址和硬件地址的映射问题</strong></em></p>
+<p><em><strong>只要主机或路由器要和本网络上的另一个已知IP地址的主机或路由器进行通信，ARP协议就会自动的把这个IP地址解析为链路层所需要的硬件地址</strong></em></p>
+<figure data-type="image" tabindex="39"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/2f166daa-9cfd-4780-98cb-e592823bf7a6/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="425-ip数据报的格式">4.2.5 IP数据报的格式</h3>
+<p>（1）IP数据报首部固定部分的各字段</p>
+<figure data-type="image" tabindex="40"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d7ce00fa-03de-4fb4-af84-6934a0e666a9/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>首部长度 如果是0101，则表示长度为5*4字节=20字节</li>
+<li>区分服务：一般不使用</li>
+<li>总长度：不超过MTU</li>
+<li>标识（identification）：当数据报长度超过网络的MTU而必须分片时，这个标识字段的值就被复制到所有的数据报片的标志字段中。相同的标识字段的值使分片后的各数据报片最后能正确的重装为原来的数据报</li>
+<li>标志（flag）</li>
+</ul>
+<figure data-type="image" tabindex="41"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/fdfcfc66-c153-4c83-9e3a-2e7a245fd229/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>片偏移</li>
+</ul>
+<p><em><strong>每个分片的长度一定是8字节（64位）的整数倍</strong></em></p>
+<figure data-type="image" tabindex="42"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/587d01dd-0247-4d08-b97f-1b9b21c0a4bf/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>生存时间（TTL）</li>
+</ul>
+<p>防止数据报无限制的兜圈子，现在的TTL的单位是跳数</p>
+<ul>
+<li>协议</li>
+</ul>
+<figure data-type="image" tabindex="43"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/18da4fc0-dad5-44cd-8c11-3ca45d96eae3/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>首部检验和：只检验数据报的首部，不包括数据部分</li>
+</ul>
+<figure data-type="image" tabindex="44"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/58d40c5a-d464-49e9-aa93-9b50e93fdf4b/image.png" alt="image.png" loading="lazy"></figure>
+<p>（2）可变部分</p>
+<h3 id="426-ip层转发分组的流程">4.2.6 IP层转发分组的流程</h3>
+<p><em><strong>（目的网络地址，下一跳地址）</strong></em></p>
+<figure data-type="image" tabindex="45"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3bc23510-0143-4dca-a244-c665176682e0/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="43-划分子网和构造超网">4.3 划分子网和构造超网</h2>
+<h3 id="431-划分子网">4.3.1 划分子网</h3>
+<p>（1）从两级IP地址到三级IP地址</p>
+<p><em><strong>基本思路</strong></em></p>
+<ul>
+<li>划分子网是一个单位内部的事情，本单位以外的网络看不见这个网络由多少子网组成</li>
+<li>从网络的主机号借用若干位作为子网号（subnet-id)，于是两级IP地址在<strong>本单位内部就变为三级网络地址</strong></li>
+</ul>
+<figure data-type="image" tabindex="46"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/19aae0b7-d76e-4da1-89df-327f8fc4a79d/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li></li>
+</ul>
+<figure data-type="image" tabindex="47"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/6b06c86f-cce1-4223-8e07-badbc11516b8/image.png" alt="image.png" loading="lazy"></figure>
+<p>（2）子网掩码（subnet mask）</p>
+<p><em><strong>默认子网掩码</strong></em></p>
+<figure data-type="image" tabindex="48"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/cebf5751-b069-42bb-ad7e-0a409af541f8/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>例子</li>
+</ul>
+<figure data-type="image" tabindex="49"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/438aba28-765f-4fa8-9f11-a92d3b0125fb/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="432-使用子网时分组的转发">4.3.2 使用子网时分组的转发</h3>
+<p><em><strong>使用子网划分后，路由表必须包含：目的网络地址，子网掩码，下一跳地址</strong></em></p>
+<figure data-type="image" tabindex="50"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/14590498-3447-4013-9935-ede21a976c96/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="433-无分类编址cidr构造超网">4.3.3 无分类编址CIDR（构造超网）</h3>
+<p>（1）网络前缀</p>
+<p><em><strong>变长子网掩码（VLSM）variable length subnet mask</strong></em></p>
+<p>在VLSM基础上又进一步研究出 无分类编址方法</p>
+<p><em><strong>CIDR（Classless Inter-Domain routing）</strong></em></p>
+<p><strong>特点</strong></p>
+<ul>
+<li>消除了传统的A类，B类和C类地址以及划分子网的概念：网络前缀+主机号</li>
+<li>CIDR地址块</li>
+</ul>
+<figure data-type="image" tabindex="51"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ac4d10e3-14ba-4c81-b0d2-55344bb8012e/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>地址掩码 （/多少，掩码前就有几个连续的一）</li>
+</ul>
+<p><em><strong>注意CIDR最大最小地址的计算方法</strong></em></p>
+<p><strong>路由聚合</strong>：路由表利用CIDR地址块来查找目的网络。减少路由器之间的路由选择信息的交换</p>
+<figure data-type="image" tabindex="52"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/b07a2704-7c92-4b34-92b9-fa36ac31adb2/image.png" alt="image.png" loading="lazy"></figure>
+<p>（2）最长匹配前缀</p>
+<p><em><strong>选择最具体的</strong></em></p>
+<p>（3）使用二叉树线索查找路由表</p>
+<p><em><strong>唯一前缀</strong></em></p>
+<figure data-type="image" tabindex="53"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/16b75a72-f382-49c9-af83-f32fc1ba122f/image.png" alt="image.png" loading="lazy"></figure>
+<h2 id="44-网际控制报文协议icmp">4.4 网际控制报文协议ICMP</h2>
+<p><em><strong>为了更有效地转发IP数据报和提高成功交付地机会</strong></em></p>
+<p>不是高层协议</p>
+<figure data-type="image" tabindex="54"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d05c6e41-940c-4b7e-8c6d-546d78bf12ea/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="441-icmp报文的种类">4.4.1 ICMP报文的种类</h3>
+<ul>
+<li>
+<p>ICMP差错报文</p>
+<ul>
+<li>数据字段有相同的格式</li>
+</ul>
+<figure data-type="image" tabindex="55"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/da424ff1-dfbc-4bad-b0c3-35127dc13fab/image.png" alt="image.png" loading="lazy"></figure>
+</li>
+<li>
+<p>ICMP询问报文</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="56"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/ce012fd4-a0f1-46c7-af60-841526b00e87/image.png" alt="image.png" loading="lazy"></figure>
+<p><strong>不发送ICMP报文的几种情况</strong></p>
+<ul>
+<li>对ICMP差错报文不发送</li>
+<li>对第一个分片的数据报片的所有后续数据报片不发送</li>
+<li>具有多播地址的数据报</li>
+<li>具有特殊地址（127.0.0.0或0.0.0.0）</li>
+</ul>
+<h3 id="442-icmp应用举例">4.4.2 ICMP应用举例</h3>
+<p><strong>1.PING（应用层直接使用网络层ICMP）</strong></p>
+<p>测试两台主机之间的连通性</p>
+<p><strong>2.traceroute</strong>（用来跟踪一个分组从源点到终点的路径）</p>
+<p><em><strong>注意：花费的时间与经过的路由器的个数无关</strong></em></p>
+<h2 id="45-互联网的路由选择协议">4.5 互联网的路由选择协议</h2>
+<p><em><strong>就是讨论路由表中的路由是怎么样得出的</strong></em></p>
+<h3 id="451-有关路由选择协议的几个基本概念">4.5.1 有关路由选择协议的几个基本概念</h3>
+<p><strong>1. 理想的路由算法</strong></p>
+<ul>
+<li>正确且完整</li>
+<li>计算简单</li>
+<li>自适应性（鲁棒性）
+<ul>
+<li>静态路由选择策略</li>
+<li>动态路由选择策略</li>
+</ul>
+</li>
+<li>收敛于一个可接受的解</li>
+<li>公平（对于用户）</li>
+<li>最佳（较为合理）</li>
+</ul>
+<p><strong>2. 分层次的路由选择协议</strong></p>
+<p><em><strong>互联网主要采用动态的（自适应），分布式的路由选择协议</strong></em></p>
+<p><strong>AS（自治系统autonomous system）</strong></p>
+<ul>
+<li>内部网关协议IGP（Interior Gateway Protocol）</li>
+<li>外部网关协议EGP（external gateway protocol）
+<ul>
+<li>边界网关协议BGP</li>
+</ul>
+</li>
+<li>域间路由选择</li>
+<li>域内路由选择</li>
+</ul>
+<h3 id="452-内部网关协议rip">4.5.2 内部网关协议RIP</h3>
+<p><em><strong>基于距离向量的路由选择协议简单</strong></em></p>
+<p><em><strong>1.工作原理</strong></em></p>
+<ul>
+<li>跳数（hop count）</li>
+<li>rip不能在两个网络之间同时使用多条路由，选择一条具有最少路由器的路由</li>
+</ul>
+<p><em><strong>特点</strong></em></p>
+<ul>
+<li>仅相邻路由器之间交换信息</li>
+<li>交换的信息是本路由器的路由表</li>
+<li>固定时间间隔</li>
+</ul>
+<p><em><strong>2.距离向量算法</strong></em></p>
+<p>对于每一个相邻路由器（地址为X）当前路由器地址为A发来的RIP报文：</p>
+<p><em><strong>注意，X中的目的网络为N</strong></em></p>
+<p>（1）A修改X发过来的RIP报文，把下一跳地址都改为X，距离+1；</p>
+<p>（2）</p>
+<ul>
+<li>若原路由表没有目的网络N，则添加</li>
+<li>否则
+<ul>
+<li>若下一跳地址为X，则把收到的项目替换路由表的原项目</li>
+<li>如不是X，则选择最短距离的那个项目</li>
+</ul>
+</li>
+<li>三分钟未收到，则把该路由器设为不可达<em><strong>距离为16表示不可达</strong></em></li>
+</ul>
+<p>例子</p>
+<figure data-type="image" tabindex="57"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/7fd0c21c-7f96-4951-b5f5-bcccedbe7b0e/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>RIP协议让一个自治系统中所有的路由器和自己的相邻路由器定期交换路由信息，并不断更新路由表，使得每一个路由器到每一个目的网络的路由都是最短的</strong></em></p>
+<p><em><strong>3.RIP协议的报文格式</strong></em></p>
+<figure data-type="image" tabindex="58"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/365a1f44-143a-4602-99b6-652709cdfe93/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>RIP报文由首部和路由部分组成</li>
+<li>首部占4个字节</li>
+<li>命令字段指出报文的意义：
+<ul>
+<li>1表示请求路由信息</li>
+<li>2表示对请求信息的相应或未被请求而发出的路由更新报文</li>
+</ul>
+</li>
+<li>首部后面0为了四字节字的对齐</li>
+<li>地址族标识符指出所使用的地址协议</li>
+<li>自治系统号ASN</li>
+<li>RIP2还具有简单的鉴别功能</li>
+</ul>
+<figure data-type="image" tabindex="59"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/15243915-1677-4073-b64e-3e9fafe24770/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>问题</strong></em></p>
+<p>RIP的一个问题是，当网络出现故障时，要经过较长时间才能将信息传到所有的路由器（即坏消息传播的慢）</p>
+<figure data-type="image" tabindex="60"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/9e7e886b-aaf8-40ef-92db-131b53e7c6f4/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="453-内部网关协议ospfopen-shortest-path-first">4.5.3 内部网关协议OSPF（Open Shortest Path First）</h3>
+<p>为了克服RIP的缺点在1989年开发出来的</p>
+<p><em><strong>1.OSPF协议的基本特点</strong></em></p>
+<p>Dijkstra提出的最短路径算法SPF</p>
+<p><strong>最重要的特征：使用分布式的链路状态协议</strong></p>
+<p>（1）使用洪泛法，向本自治系统中所有路由器发送信息</p>
+<p>（2）发送的信息即与本路由器相邻的所有路由器的链路状态</p>
+<p>（3）只有当链路发生变化时，路由器才用洪泛法发送此信息</p>
+<p>为了使OSPF能够用于规模很大的网络，OSPF将一个自治系统划分为若干更小的范围，区域</p>
+<figure data-type="image" tabindex="61"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/5577d352-7211-4503-b79e-65c7c7b4e276/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>主干区域</strong></em></p>
+<p><em><strong>区域边界路由器</strong></em></p>
+<p><em><strong>主干路由器</strong></em></p>
+<p><em><strong>自治系统边界路由器</strong></em></p>
+<p><strong>OSPF直接用IP数据报传送，不用UDP</strong></p>
+<figure data-type="image" tabindex="62"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/d4315927-14b7-40b0-a1e7-2302a826ea28/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>2.OSPF的五种分组类型</strong></em></p>
+<p>（1）问候分组（相邻路由器每十秒交换一次）</p>
+<p>（2）数据库描述分组</p>
+<p>（3）链路状态请求分组</p>
+<p>（4）链路状态更新分组：OSPF协议最核心的部分</p>
+<p>（5）链路状态确认分组</p>
+<figure data-type="image" tabindex="63"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/e3c566de-0aea-4313-b3e4-6b163170e6bb/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="64"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/7c6d3d8c-362b-446d-8d12-af865bb15733/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="454-外部网关协议bgp">4.5.4 外部网关协议BGP</h3>
+<figure data-type="image" tabindex="65"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/980799d7-4976-47eb-8b06-d5cb71b16a1e/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="66"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3addbb29-1f88-4008-8eec-bd6323ad547f/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>注意：自治系统连通图是树形结构，不存在回路</strong></em></p>
+<figure data-type="image" tabindex="67"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/4289beb6-b746-4fa2-8c24-4d179fc26731/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="68"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/48e4cc22-2f5a-4367-a433-5b864aaed794/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="455-路由器的构成">4.5.5 路由器的构成</h3>
+<p><em><strong>1.路由器的结构</strong></em></p>
+<figure data-type="image" tabindex="69"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/6f33d0ea-b7f9-49ed-9b24-acf1c64e27ed/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>路由选择部分也叫控制部分</li>
+<li>分组转发部分
+<ul>
+<li>交换结构：根据转发表，将输入输出正确的对应起来</li>
+<li>输入端口：1，2，3分别代表物理层，数据链路层和网络层的处理模块</li>
+<li>输出端口</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>转发和路由选择的区别</strong></em>：转发只针对一个路由器；路由选择涉及很多路由器</p>
+<figure data-type="image" tabindex="70"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/2172d0c2-0acb-4207-a627-674fed08a709/image.png" alt="image.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="71"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/6e651b51-fb86-40d7-b23d-6a292d6799d3/image.png" alt="image.png" loading="lazy"></figure>
+<p><em><strong>2.交换结构</strong></em></p>
+]]></content>
+    </entry>
+</feed>

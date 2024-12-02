@@ -1,0 +1,355 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>计算机组成原理 | </title>
+
+<link rel="shortcut icon" href="https://luxuuuuuuuu.github.io/favicon.ico?v=1733143661914">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://luxuuuuuuuu.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://luxuuuuuuuu.github.io" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1733143661914" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    计算机组成原理
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-12-02 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="第七章-存储器层次结构">第七章 存储器层次结构</h1>
+<h2 id="71存储器概述">7.1存储器概述</h2>
+<h3 id="711存储器的分类">7.1.1存储器的分类</h3>
+<p>1.按存储元件分类</p>
+<ul>
+<li>半导体存储器</li>
+<li>磁性材料存储器</li>
+<li>光介质存储器。</li>
+</ul>
+<p>2.按存取方式分类</p>
+<ul>
+<li>随机存取存储器（RAM）</li>
+<li>顺序存取存储器（SAM）</li>
+<li>直接存取存储器（DAM）</li>
+</ul>
+<p>3.按信息的可更改性分类<br>
+按信息的可更改性分为可读可写存储器和只读存储器(read only memory,ROM)。<br>
+ROM中的信息一旦确定，通常情况下只读不写，但在某些情况下也可重新写入。RAM是<br>
+一种可读可写存储器，RAM和ROM都采用随机存取方式进行信息的访问。</p>
+<p>4.按断电后信息的可保存性分类</p>
+<h3 id="712-主存储器的组成和基本操作">7.1.2 主存储器的组成和基本操作</h3>
+<figure data-type="image" tabindex="1"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/0d43c04a-4ccf-4da7-8b08-49de6cda98f5/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="713存储器的层次化结构">7.1.3存储器的层次化结构</h3>
+<figure data-type="image" tabindex="2"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/3b30e90b-c334-4bc5-b4a7-fa0b3af2c877/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>数据一般只在相邻两层之间复制传送，而且总是从慢速存储器复制到快速存储器才能被使用。</li>
+</ul>
+<h2 id="72-半导体随机存取存储器">7.2 半导体随机存取存储器</h2>
+<p><em><strong>半导体 RAM具有体积小、存取速度快等优点，因而适合作为内部存储器使用</strong></em></p>
+<ul>
+<li>半导体RAM
+<ul>
+<li>双极型RAM</li>
+<li>MOS型RAM
+<ul>
+<li>静态RAM（SRAM）</li>
+<li>动态RAM（DRAM）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="721-基本存储元件">7.2.1 基本存储元件</h3>
+<p><em><strong>用来存储一位二进制信息</strong></em></p>
+<p>1.六管静态MOS管存储元件</p>
+<figure data-type="image" tabindex="3"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/5a92534d-3424-45f4-bb7d-bd84ef7dab8e/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p>A高电平，B低电平存1</p>
+</li>
+<li>
+<p>B高电平，A低电平存2</p>
+</li>
+<li>
+<p>保持：W上加低电平</p>
+</li>
+<li>
+<p>读出：</p>
+<ul>
+<li>在两个位线，字选择线上加高电平</li>
+<li>检测位线负脉冲</li>
+</ul>
+</li>
+<li>
+<p>写入</p>
+<ul>
+<li>字选择线上加高电平</li>
+<li></li>
+</ul>
+<p>若要写1,则在位线 D1上加低电平，使B点电位下降，T1管截止，A点电位上升，使T2管导通完成写1。</p>
+<p>若要写0,则在D0线上加低电平，使A点电位下降，T2管截止，B点电位上升，T1管导通，完成写0。</p>
+</li>
+</ul>
+<p>2.单管动态MOS 管存储元件</p>
+<figure data-type="image" tabindex="4"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/21514603-174c-4308-8449-8390ba55a4e7/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>读出（破坏性读出）
+<ul>
+<li>字选择线W加选通脉冲</li>
+</ul>
+</li>
+<li>写入
+<ul>
+<li>写1时，在数据线上加高电平，经T管对Cs充电</li>
+<li>写0时，在数据线上加低电平，Cs充分放电</li>
+</ul>
+</li>
+<li>刷新
+<ul>
+<li>定时对Cs充电</li>
+</ul>
+</li>
+</ul>
+<p>3.静态存储元件和动态存储元件比较</p>
+<figure data-type="image" tabindex="5"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/601e87da-4df6-4856-a32e-c1f0c86480ed/image.png" alt="image.png" loading="lazy"></figure>
+<h3 id="722-sram芯片和dram芯片">7.2.2 SRAM芯片和DRAM芯片</h3>
+<p><em><strong>存储器芯片由存储体，I/O读写电路，地址译码和控制电路等部分组成</strong></em></p>
+<figure data-type="image" tabindex="6"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/755f1f51-cc37-46a0-b437-200ed14a8b4c/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p>存储体（存储矩阵）：存储单元的集合</p>
+</li>
+<li>
+<p>地址译码器：将地址转换为译码输出线上的高电平，有一维译码和二维译码两种方式</p>
+<ul>
+<li>
+<p>一维译码</p>
+<ul>
+<li>适用于小容量的静态存储器</li>
+<li>只有一个行译码器</li>
+</ul>
+</li>
+<li>
+<p>二维译码</p>
+<ul>
+<li>适用于容量较大的动态存储器</li>
+<li></li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/099cdb63-5ab4-4ad0-89ad-7c4adc3ceedf/image.png" alt="image.png" loading="lazy"></figure>
+</li>
+</ul>
+<p>有4096个单元，需要12根地址线？？？？</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="8"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/7f6864a6-f5f9-4127-b28a-4920ff8448b9/image.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>驱动器（译码器后加驱动器）</li>
+<li>I/O控制电路：用于控制被选中单元的读出或写入，具有放大信息的作用</li>
+<li>片选控制信号CS</li>
+<li>读写控制信号WE</li>
+</ul>
+<p><strong>4M*4位DRAM芯片示意图</strong></p>
+<figure data-type="image" tabindex="9"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/075110e8-255e-4270-922a-d5c8dbf2fcd5/f0c79356-b49d-42b8-a463-e30c85a0c44e/image.png" alt="image.png" loading="lazy"></figure>
+<p>（a）</p>
+<ul>
+<li>11根地址引脚线A0-A10</li>
+<li>四根数据引脚线D1-D4</li>
+<li>RAS行选通信号</li>
+<li>CAS列选通信号</li>
+<li>WE读写控制引脚</li>
+<li>OE输出使能驱动引脚（低电平有效，高电平断开输出）</li>
+</ul>
+<p><em><strong>刷新时只给各芯片送行地址和RAS信号，芯片中某一行的所有元被选中并进行读操作——读出零则充分放电，一则进行充电</strong></em></p>
+<h3 id="723-sdram芯片技术">7.2.3 SDRAM芯片技术</h3>
+<p>1.SDRAM芯片技术</p>
+<p>传统的</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://luxuuuuuuuu.github.io/post/shu-ju-jie-gou/" class="post-title gt-a-link">
+                    数据结构
+                </a>
+            </div>
+        
+
+        
+            <span id="/post/ji-suan-ji-zu-cheng-yuan-li/" class="leancloud_visitors" data-flag-title="计算机组成原理">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+            
+
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs/dist/disqusjs.css">
+<script src="https://cdn.jsdelivr.net/npm/disqusjs/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: '',
+  apikey: '',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+            
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: '',
+		appKey: '',
+		avatar: '',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"> 这世间所有的相遇，都是久别重逢</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://luxuuuuuuuu.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
